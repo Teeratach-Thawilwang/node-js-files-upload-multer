@@ -7,6 +7,9 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+// define root path of project
+global.__basedir = __dirname;
+
 var app = express();
 
 // view engine setup

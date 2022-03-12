@@ -12,9 +12,19 @@
     <h1>
         <%= title %>
     </h1>
-    <form action="/stats" enctype="multipart/form-data" method="post">
+    <h3>Upload single file</h3>
+    <form action="/stats/single" enctype="multipart/form-data" method="post">
         <div class="form-group">
-            <input type="file" class="form-control-file" name="uploaded_file">
+            <input type="file" class="form-control-file" name="uploaded_file" id="uploaded_file">
+            <input type="text" class="form-control" placeholder="Number of speakers" name="nspeakers">
+            <input type="submit" value="Get me the stats!" class="btn btn-default">
+        </div>
+    </form>
+    <br>
+    <h3>Upload multiple files</h3>
+    <form action="/stats/multi" enctype="multipart/form-data" method="post">
+        <div class="form-group">
+            <input type="file" class="form-control-file" name="uploaded_files" id="uploaded_files" multiple maxfile=5>
             <input type="text" class="form-control" placeholder="Number of speakers" name="nspeakers">
             <input type="submit" value="Get me the stats!" class="btn btn-default">
         </div>
