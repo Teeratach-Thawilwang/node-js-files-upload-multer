@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>
+        <%= title %>
+    </h1>
+    <form action="/stats" enctype="multipart/form-data" method="post">
+        <div class="form-group">
+            <input type="file" class="form-control-file" name="uploaded_file">
+            <input type="text" class="form-control" placeholder="Number of speakers" name="nspeakers">
+            <input type="submit" value="Get me the stats!" class="btn btn-default">
+        </div>
+    </form>
+</body>
+
+</html>
